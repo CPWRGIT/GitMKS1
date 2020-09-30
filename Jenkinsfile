@@ -6,7 +6,7 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
-String ISPW_Application     = "MKS1"        // Change to your assigned application
+String ISPW_Application     = "GIT1"        // Change to your assigned application
 String HCI_Token            = "PFHMKS0"     // Change to your assigned ID
 
 node {
@@ -19,10 +19,10 @@ node {
   stage('Git to ISPW Synchronization')
   {
     gitToIspwIntegration app: "${ISPW_Application}",
-    branchMapping: '''*master* => STG, per-branch'
-    TXX1* => QA1, per-branch
-    TXX2* => QA2, per-branch
-    TXXX* => QA3, per-branch''',
+    branchMapping: '''*master* => MSTR, per-branch'
+    feature1* => FT1, per-branch
+    feature2* => FT2, per-branch
+    bug* => HFIX, per-branch''',
     //connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
     //connectionId: '4b4cf589-b835-4579-96ee-2aba6b818125', // TD-CWCC
     connectionId: '91bae501-8b4d-4155-909d-2ad5aa9f3131', // DEMO-CWCC
@@ -31,7 +31,7 @@ node {
     gitRepoUrl: 'https://github.com/CPWRGIT/GitMKS1.git',   // Change this to your repo
     //runtimeConfig: 'isp8', // CWC2
     runtimeConfig: 'ispw', // CWCC
-    stream: 'FTSDEMO'
+    stream: 'GITDEMO'
   }
 
   stage('Build ISPW assignment')

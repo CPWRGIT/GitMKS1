@@ -1,6 +1,6 @@
 !!com.compuware.ispw.cli.model.IspwRoot
 ispwApplication:
-  application: MKS1
+  application: GIT1
   host: CWCC
   pathMappings:
   - path: \AMAC
@@ -53,4 +53,4 @@ ispwApplication:
       ispwType: SRPC
   port: 16196
   runtimeConfig: ISPW
-  stream: FTSDEMO
+  stream: GITDEMO
