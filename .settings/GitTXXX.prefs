@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
 ispwEditing=TRUE
+ispwGitAssignDesc=${user}-${project_name}
+ispwMappingLevel=WRK2
+ispwYamlConfigPath=C\:/Users/pfhmks0/git/GitMKS1/ispwconfig.yml
